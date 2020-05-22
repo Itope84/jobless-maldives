@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Sen:wght@400;700;800&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: theme("colors.font.default");
+}
+
+@for $i from 1 to 6 {
+  h#{$i},
+  .h#{$i} {
+    font-family: "Sen", sans-serif;
+    color: theme("colors.black");
+  }
+}
+
+.font-header {
+  font-family: "Sen", sans-serif;
+}
+
+a {
+  color: theme("colors.primary");
+
+  &.decorated-link {
+    border-bottom: 1px dashed;
+    border-color: theme("colors.font.light");
+  }
+}
+
+ul.check-list {
+  li {
+    font-family: "icomoon", "Open Sans", sans-serif !important;
+
+    &::before {
+      content: "\e904";
+      color: theme("colors.primary");
+      margin-right: 8px;
+      font-size: 0.8rem;
+    }
+  }
+}
+:focus {
+  /* You can remove this to use the browser's defaults */
+  //   outline: #06f auto 2px;
+}
+
+body.using-mouse :focus {
+  outline: none;
+}
